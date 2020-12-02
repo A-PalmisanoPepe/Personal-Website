@@ -36,6 +36,7 @@ td {
 }
 
 table {
+    box-sizing: border-box;
     margin: auto;
 }
 
@@ -59,8 +60,11 @@ button {
     color: rgb(56, 55, 55);
     font-size: 8vmin;
     font-weight: bold;
-    padding: 2vmin;
     text-align: center;
+}
+
+button:focus {
+    outline: none;
 }
 
 #introduction button {
@@ -115,11 +119,10 @@ button {
     height: 60vh;
     border-radius: 5px;
     box-shadow: 10px 10px 5px rgb(56, 55, 55);
-    justify-content: center;
-    align-items: center; 
 }
 
 #match .sheet{
+    display: flex;
     width: 60vh;
     
 }
@@ -165,22 +168,21 @@ button {
     font-size: large; 
 }
 
+.turn {
+    font-size: 30px;
+}
+
+.cross {
+    position: absolute;
+    top: -4px;
+    right: 9px;
+    font-size: 30px;
+}
+
 .close:active {
     box-shadow: none;
     transform: translateX(5px);
     transform: translateY(5px);
-}
-
-.turn-back a {
-    position: absolute;
-    top: 7px;
-    right: 16px;
-}
-
-.close a {
-    position: absolute;
-    top: 5px;
-    right: 13px;
 }
 
 #result h2 {
@@ -189,6 +191,7 @@ button {
 
 .play-again {
     background-color: seashell;
+    padding: 15px;
     border-radius: 5px;
     font-size: medium;
     border: 1px solid rgb(56, 55, 55);
