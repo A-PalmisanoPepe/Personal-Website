@@ -86,6 +86,10 @@ button:hover {
     border: 2px solid aquamarine ;
 }
 
+button:focus {
+    outline: none;
+}
+
 .my-logo img {
     display: flex;
     width: 40px;
@@ -243,10 +247,26 @@ button:hover {
 
 }
 
-iframe, .presentation {
+.game, .iframe-container {
+    position: relative;
     width: 300px;
     height: 300px;
     margin: 20px;
+}
+
+.presentation {
+    width: 300px;
+    height: 300px;
+    z-index: 1;
+    border: none;
+}
+
+.game {
+    border: none;
+}
+
+.resize-slides {
+    display: none;
 }
 
 form {
@@ -375,6 +395,63 @@ footer {
         transition: transform 0.5s ease-in;
     }
 
+    .resize-slides {
+        display: flex;
+        position: absolute;
+        top: -1px;
+        right: 15px;
+        transform: rotate(90deg);
+        z-index: 2;
+        font-size: 13px;
+        font-weight: bold;
+        border-radius: 100%;
+        padding: 3px;
+    }
+
+    .close-slides {
+        display: none;
+    }
+
+    .open-slides-active {
+        display: none;
+    }
+
+    .close-slides-active {
+        display: inline;
+        font-size: 12px;
+        padding: 4px;
+    }
+
+    .presentation-active {
+        width: 550px;
+        height: 248.57px;
+    }
+
+    .iframe-container-active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vh;
+        transform: rotate(270deg);
+        position: relative;
+        z-index: 1;
+    }
+
+    .projects-section-active {
+        scroll-snap-align: unset; 
+    }
+
+    .scrollbar-active {
+        
+        overflow: hidden;
+        background-color: rgb(42, 40, 40);
+    }
+
+    .game-active {
+        width: 0;
+    }
+    
+
 }
 
 @media only screen and (min-width: 961px) {
@@ -405,16 +482,35 @@ footer {
 
     .projects-container { 
         position: relative;
-        width: 800px;
+        width: 823px;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
 
+    .presentation {
+        transition: width 3s ease;
+    }
+
     .presentation:hover {
+
+        transition: width 3s ease;
+
         position: absolute;
-        width: 730px;
-        height: 330px;
+        top: -27px;
+        left: -10px;
+        width: 770px;
+        height: 348px;
+        z-index: 1;
+    }
+
+    .game {
+        transition: width 3.5s ease;
+    }
+
+    .game-transitionstart {
+        width: 0;
+        transition: width 2.5s ease;
     }
 
     .contact-info { 
@@ -423,6 +519,10 @@ footer {
         align-items: center;
         justify-content: space-between;
         width: 60vw;
+    }
+
+    .contact-info h3 {
+        margin-right: 12px;
     }
 
     footer {

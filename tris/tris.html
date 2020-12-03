@@ -11,40 +11,66 @@
         <div class="page" id='introduction'>
             <a href="tris.html#choise-sign"><button>Fai una partita a Tris!</button></a>
         </div>
+        
         <div class="page" id='choise-sign'>
             <a href="tris.html#introduction"><button class='close' onclick="window.location.reload()"><span class="cross">&Cross;</span></button></a>
+            
             <div class="sheet">
-            <h2>Scegli il segno</h2>
-            <div class="choise">
-            <a href="tris.html#match"><button id="x">x</button></a>
-            <a href="tris.html#match"><button id="o">o</button></a>
+                <h2>Scegli il segno</h2>
+                
+                <div class="choise">
+                    <a href="tris.html#match"><button id="x">x</button></a>
+            
+                    <a href="tris.html#match"><button id="o">o</button></a>
+                </div>
             </div>
-            </div>
+
             <a href="tris.html#introduction"><button class='turn-back' onclick="window.location.reload()"><span class="turn">&ldca;</span> </button></a>
         </div>
+
         <div class="page" id='match'>
             <a href="tris.html#introduction"><button class='close' onclick="window.location.reload()"><span class="cross">&Cross;</span></button></a>
+            
             <div class="sheet">
-            <table>
-                <tr>
-                    <td id="cell1">&nbsp;</td><td id="cell2" class="central-column">&nbsp;</td><td id="cell3">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td id="cell4" class="central-row">&nbsp;</td><td id="cell5"class="central-column central-row">&nbsp;</td><td id="cell6" class="central-row">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td id="cell7">&nbsp;</td><td id="cell8" class="central-column">&nbsp;</td><td id="cell9">&nbsp;</td>
-                </tr>
-            </table>
+                <table>
+                    <tr>
+                        <td id="cell1">&nbsp;</td>
+                        
+                        <td id="cell2" class="central-column">&nbsp;</td>
+                        
+                        <td id="cell3">&nbsp;</td>
+                    </tr>
+                    
+                    <tr>
+                        <td id="cell4" class="central-row">&nbsp;</td>
+                        
+                        <td id="cell5"class="central-column central-row">&nbsp;</td>
+                        
+                        <td id="cell6" class="central-row">&nbsp;</td>
+                    </tr>
+                    
+                    <tr>
+                        <td id="cell7">&nbsp;</td>
+                        
+                        <td id="cell8" class="central-column">&nbsp;</td>
+                        
+                        <td id="cell9">&nbsp;</td>
+                    </tr>
+                </table>
             </div>
+
             <a href="tris.html#choise-sign"><button class='turn-back' onclick="window.location.reload()"><span class="turn">&ldca;</span></button></a>
         </div>
+        
         <div class="page" id="result">
             <a href="tris.html#introduction"><button class='close' onclick="window.location.reload()"><span class="cross">&Cross;</span></button></a>
+            
             <div class="sheet">
                 <h2 id="your-result"></h2>
+                
                 <a href="tris.html#choise-sign"><button class="play-again" onclick="window.location.reload()">Gioca ancora!</button></a>
             </div>
+
             <a href="tris.html#match"><button class='turn-back'><span class="turn">&ldca;</span></button></a>
         </div>
     
