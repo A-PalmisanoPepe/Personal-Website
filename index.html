@@ -11,9 +11,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     </head>
 <body>
-        
+
+<img id="background" src="images/background.png">    
+
 <div class="scrollbar-container">
-    <div class="scrollbar-section">
+    <div class="scrollbar-section" id="home">
             <nav class="nav-bar">
                 <div class="my-logo"><a href="index.html"><img src="images/logo-scuro.png" ></a></div>
                 
@@ -52,8 +54,8 @@
         </section>
     </div>
 
-    <div class="scrollbar-section">
-        <section id="about" class="container">
+    <div class="scrollbar-section" id="about">
+        <section class="container">
             <div class="title"><h2>Chi sono</h2></div>
 
             <div class="contents">
@@ -90,8 +92,8 @@
         </section>
     </div>
 
-    <div class="scrollbar-section projects-section">
-        <section id="projects" class='container'>    
+    <div class="scrollbar-section" id="projects">
+        <section  class='container'>    
             <div class="title"><h2>I miei progetti</h2></div>
             
             <div class="contents">
@@ -178,52 +180,9 @@
             </div>
         </footer>
     </div>
-
-    <img id="background" src="images/background.png">
 </div>
 
+<script src="js/script.js"></script>
+
 </body>
-<script>
-    const logoMenu = document.querySelector('.logo-menu');
-    const menu = document.querySelector('.menu');
-    const startingText = document.querySelector('.starting-text');
-    const slidesButton = document.querySelector('.resize-slides');
-    const openSlides = document.querySelector('.open-slides');
-    const closeSlides = document.querySelector('.close-slides');
-
-
-    const slidesReader = document.querySelector('.presentation');
-    const  iframeContainer = document.querySelector('.iframe-container');
-    const fullPage = document.querySelector('.scrollbar-container');
-    const projectsSection = document.querySelector('.projects-section');
-    const game = document.querySelector('.game');
-
-    function slideMenu() {
-        menu.classList.toggle('menu-active');
-        logoMenu.classList.toggle('logo-X');
-        startingText.classList.toggle('starting-text-hide');
-    }
-
-    logoMenu.addEventListener('click', slideMenu);
-
-    function resizeSlides() {
-        slidesReader.classList.toggle('presentation-active');
-        iframeContainer.classList.toggle('iframe-container-active');
-        iframeContainer.scrollIntoView();
-        projectsSection.classList.toggle('projects-section-active');
-        fullPage.classList.toggle('scrollbar-active');
-        game.classList.toggle('game-active');
-        openSlides.classList.toggle('open-slides-active');
-        closeSlides.classList.toggle('close-slides-active');  
-    }
-
-    slidesButton.addEventListener('click', resizeSlides);
-
-    function gameSlider() {
-        game.classList.toggle('game-transitionstart');
-    }
-
-    slidesReader.addEventListener('transitionstart', gameSlider);
-
-</script>
 </html>
