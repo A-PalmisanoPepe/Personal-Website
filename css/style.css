@@ -30,7 +30,7 @@ body {
 }
 
 html {
-    background-color: lavenderblush;
+    background-color: #e6e6fa;
 }
 
 .scrollbar-container {
@@ -51,7 +51,7 @@ h1 {
 h3 {
     margin: auto;
     font-size: medium;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 h4 {
@@ -71,7 +71,7 @@ a {
 
 .nav-bar a:hover {
     font-weight: bolder;
-    color: lavenderblush;
+    color: lightseagreen;
 }
 
 .nav-bar {
@@ -82,7 +82,7 @@ a {
     align-items: center;
     width: 100vw;
     height: 80px;
-    background-color: lightseagreen;
+    background-color: #e6e6fa;
     border-bottom: 3px solid rgb(42, 40, 40);
 }
 
@@ -101,16 +101,15 @@ li {
     width: 60vw;
     text-transform: uppercase;   
 }
-/* 
-.logo-menu > div {
-    height: 2px;
-    width: 22px;
-    margin: 7px;
-    background-color: lavenderblush;
-} */
+
+.menu a {
+    font-size: large;
+    font-weight: bold;
+}
 
 .dropdown {
     position: relative;
+   
 }
 
 .menu > li {
@@ -119,25 +118,37 @@ li {
 }
 
 .submenu {
-    display: none;
+    position: absolute;
+    max-height: 0;
+    transition: max-height 2s ;
 }
 
 .submenu > li {
+    display: none;
     margin-left: 20px;
 }
+/* 
+.dropdown:hover .submenu > li{
+    display: inline;
+    transition: display 0.5s;
+    transition-delay: 2.5s;
+} */
 
-.dropdown:hover .submenu{
+/* .dropdown:hover .submenu{
     display: flex;
     flex-direction: column;
     position: absolute;
-    left: -10px;
-    width: 50vw;
-  
-    background-color:lightseagreen;
-    padding: 10px 5px ;
-    
+    transition: max-height 2s ;
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+    left: -23px;
+    top: 53px;
+    width: 60vw;
+    max-height: 250px;
+    background-color: #e6e6fa;
+
     list-style: none;
-}
+} */
 
 /* ALL SECTIONS */
 
@@ -153,7 +164,7 @@ li {
 
 .container {
     display: flex;
-    background-color: lavenderblush;
+    background-color: #e6e6fa;
     flex-direction: column;
     align-items: center;  
     padding: 40px; 
@@ -192,7 +203,7 @@ li {
     padding: 40px;
     transform: translateX(0%);
     transition: transform 0.5s ease-in;
-    background-color: lavenderblush;
+    background-color: #e6e6fa;
     border: 5px solid rgb(42, 40, 40);
 }
 
@@ -202,7 +213,7 @@ li {
     font-weight: bold;
     text-align: center;
     color: rgb(42, 40, 40);
-    text-shadow: 1.5px 1.5px lavenderblush; 
+    text-shadow: 1.5px 1.5px #e6e6fa; 
 }
 
 .starting-text h2 {
@@ -210,7 +221,7 @@ li {
     font-size: 30px;
     font-weight: bold;
     color: rgb(42, 40, 40);
-    text-shadow: 1.5px 1.5px lavenderblush;
+    text-shadow: 1.5px 1.5px #e6e6fa;
 }
 
 #about img { 
@@ -299,7 +310,7 @@ form {
     justify-content: center;
     width: 600px;
     margin: 0 15px 15px 15px;
-    color: lavenderblush;   
+    color: #e6e6fa;   
 }
 
 .form label, .form span{
@@ -316,7 +327,7 @@ form {
 .form input[type='email'],
 .form textarea {
     width: 600px;
-    background-color: lavenderblush;
+    background-color: #e6e6fa;
     border: none;
     font-family: 'Poppins', sans-serif;
     padding: 3px;
@@ -326,7 +337,7 @@ button {
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     color: lightseagreen;
-    background-color: lavenderblush;
+    background-color: #e6e6fa;
     border: 2px solid lightseagreen;
 }
 
@@ -349,7 +360,7 @@ footer {
     align-items: center;
     height: 60px;
     width: 100vw;
-    background-color: lightseagreen;
+    background-color: #e6e6fa;
     color: rgb(42, 40, 40);
     border-top: 3px solid rgb(42, 40, 40);
 }
